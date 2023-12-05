@@ -1,8 +1,7 @@
 CC = gcc
-CFLAGS = -Wall -Wextra -pedantic -std=c99
 
 SRC = src/main.c
-EXE = src/main
+EXE = src/main.out
 
 .PHONY: clean build run
 
@@ -10,7 +9,7 @@ clean:
 	rm -f $(EXE)
 
 build: $(SRC)
-	$(CC) $(CFLAGS) -o $(EXE) $(SRC)
+	$(CC) -o $(EXE) $(SRC)
 
 run: build
 	./$(EXE)
